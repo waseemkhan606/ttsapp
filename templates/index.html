@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text-to-Speech Converter</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text-to-Speech Converter</h1>
+
+    <textarea id="text-input" rows="5" placeholder="Enter text here..."></textarea>
+
+    <label for="voice-select">Choose a Voice:</label>
+    <select id="voice-select">
+      {% for lang, options in voices.items() %}
+      <option value="{{ lang }}">{{ options.name }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="speed-select">Playback Speed:</label>
+    <select id="speed-select">
+      <option value="0.5">0.5x</option>
+      <option value="0.75">0.75x</option>
+      <option value="1" selected>1x (Normal)</option>
+      <option value="1.25">1.25x</option>
+      <option value="1.5">1.5x</option>
+      <option value="2">2x</option>
+    </select>
+
+    <button onclick="convertToSpeech()">Convert to Speech</button>
+
+    <audio id="audio-player" controls style="display:none;"></audio>
+    <button id="download-btn" style="display:none;">Download Audio</button>
+  </div>
+  <script src="/static/scripts.js"></script>
+</body>
+</html>
