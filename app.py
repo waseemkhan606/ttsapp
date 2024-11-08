@@ -28,6 +28,9 @@ VOICE_OPTIONS = {
     "pt-br": {"name": "Portuguese (Brazil)", "tld": "com.br"},
     "ru": {"name": "Russian", "tld": "ru"},
     "zh-cn": {"name": "Chinese (Simplified)", "tld": "com.cn"},
+    "mr": {"name": "Marathi", "tld": "com"},
+    "kn": {"name": "Kannada", "tld": "co.in"},
+    "gu": {"name": "Gujarati", "tld": "co.in"}
 }
 
 @app.route('/')
